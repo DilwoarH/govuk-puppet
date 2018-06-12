@@ -29,6 +29,7 @@ class govuk::node::s_base (
   include monitoring::client
   include postfix
   include rcs
+  include awscli
 
   if ! $::aws_migration {
     include hosts
