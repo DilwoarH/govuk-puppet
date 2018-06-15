@@ -1,3 +1,8 @@
 icinga::client::check_cputype::cputype: 'amd'
 govuk_safe_to_reboot::can_reboot: 'overnight'
 govuk_safe_to_reboot::reason: 'DR node: only used in the event of a disaster'
+
+govuk_s3_db_sync::add_push_cron: true
+govuk_s3_db_sync::push_cron::databases: ['content_store_production','draft_content_store_production']
+govuk_s3_db_sync::push_cron::s3_bucket: 'govuk-staging-database-backups'
+govuk_s3_db_sync::push_cron::s3_prefix: 'carrenza/staging/mongo-api'
